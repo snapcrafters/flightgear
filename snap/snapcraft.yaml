@@ -3,18 +3,14 @@ base: core18
 version: '2019.1.2'
 summary: FlightGear
 description: |
-  Flight Gear Flight Simulator
+  FlightGear
 
 grade: stable
 confinement: strict
 
-architectures:
-  - build-on: i386
-  - build-on: amd64
-
 apps:                    
   flightgear:       
-    command: desktop-launch $SNAP/bin/fgfs --fg-root=$SNAP/fgdata
+    command: desktop-launch $SNAP/bin/fgfs --fg-root=$SNAP_USER_COMMON/fgdata
     plugs: [network, network-bind, unity7, opengl, home, pulseaudio, removable-media, joystick]
     desktop: share/applications/org.flightgear.FlightGear.desktop
     environment:
@@ -26,11 +22,11 @@ parts:
     source-type: git
     source-tag: "version/2019.1.2"
     plugin: cmake
-  flightgear-data:
-    source: https://sourceforge.net/projects/flightgear/files/release-2019.1/FlightGear-2019.1.2-data-rc.tar.bz2
-    plugin: dump
-    organize:
-      '*': fgdata/
+  # flightgear-data:
+  #   source: https://sourceforge.net/projects/flightgear/files/release-2019.1/FlightGear-2019.1.2-data-rc.tar.bz2
+  #   plugin: dump
+  #   organize:
+  #     '*': fgdata/
   flightgear:
     after: [simgear]
     source: https://github.com/FlightGear/flightgear
