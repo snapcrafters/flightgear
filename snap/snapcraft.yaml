@@ -100,6 +100,11 @@ parts:
       - pulseaudio
       - libblas3 
       - liblapack3
+      - yad
+      - libgtk-3-0
+      - libnotify4
+      - qml-module-qtquick2
+      - qml-module-qtquick-window2
   desktop-qt5:
     build-packages:
       - build-essential
