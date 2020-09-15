@@ -1,6 +1,6 @@
 name: flightgear
 base: core18 
-version: '2019.1.2'
+version: '2020.1.2'
 summary: FlightGear
 description: |
   FlightGear
@@ -20,7 +20,7 @@ parts:
   simgear:
     source: https://github.com/FlightGear/simgear
     source-type: git
-    source-tag: "version/2019.1.2"
+    source-tag: "version/2020.1.2"
     plugin: cmake
   # flightgear-data:
   #   source: https://sourceforge.net/projects/flightgear/files/release-2019.1/FlightGear-2019.1.2-data-rc.tar.bz2
@@ -31,7 +31,7 @@ parts:
     after: [simgear]
     source: https://github.com/FlightGear/flightgear
     source-type: git
-    source-tag: "version/2019.1.2"
+    source-tag: "version/2020.1.2"
     plugin: cmake
     override-build: |
       snapcraftctl build
