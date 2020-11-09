@@ -11,7 +11,7 @@ confinement: strict
 apps:                    
   flightgear:       
     command: desktop-launch $SNAP/bin/fgfs --fg-root=$SNAP_USER_COMMON/fgdata
-    plugs: [network, network-bind, unity7, opengl, home, pulseaudio, removable-media, joystick]
+    plugs: [network, network-bind, unity7, opengl, home, audio-playback, removable-media, joystick]
     desktop: share/applications/org.flightgear.FlightGear.desktop
     environment:
       LD_LIBRARY_PATH: "$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/pulseaudio:$LD_LIBRARY_PATH"
