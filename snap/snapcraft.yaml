@@ -14,7 +14,7 @@ apps:
     plugs: [network, network-bind, unity7, opengl, home, audio-playback, removable-media, joystick]
     desktop: share/applications/org.flightgear.FlightGear.desktop
     environment:
-      LD_LIBRARY_PATH: "$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/pulseaudio:$LD_LIBRARY_PATH"
+      LD_LIBRARY_PATH: "$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/pulseaudio"
 
 parts:
   simgear:
