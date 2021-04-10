@@ -54,6 +54,7 @@ parts:
       - libplib-dev
       - libopenal-dev
       - libcurl4-openssl-dev
+      - liblzma-dev
     stage-packages:
       - libasn1-8-heimdal
       - libasound2
